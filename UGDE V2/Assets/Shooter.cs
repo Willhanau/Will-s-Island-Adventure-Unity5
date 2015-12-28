@@ -11,7 +11,7 @@ public class Shooter: MonoBehaviour {
 		float vert = Input.GetAxis ("Vertical") * Time.deltaTime * moveSpeed;
 		transform.Translate (hori, vert, 0);
 		if (Input.GetButtonUp ("Fire1")) {
-			Vector3 m_pos = Input.mousePosition;
+            Vector3 m_pos = Input.mousePosition;
 			m_pos.z = 10f;
 			Vector3 mouse_pos = Camera.main.ScreenToWorldPoint(m_pos);
 
