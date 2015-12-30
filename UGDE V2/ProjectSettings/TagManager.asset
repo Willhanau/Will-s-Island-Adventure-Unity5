@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sunlight
   - playerDoor
+  - cell
   layers:
   - Default
   - TransparentFX
