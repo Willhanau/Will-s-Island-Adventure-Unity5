@@ -20,7 +20,7 @@ public class TriggerZone : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if(Inventory.charge == 4)
+        if(Inventory.charge == 4 && col.gameObject.tag == "Player")
         {
             transform.FindChild("door").SendMessage("DoorCheck");
             if (GameObject.Find("PowerGUI"))
@@ -29,20 +29,16 @@ public class TriggerZone : MonoBehaviour {
                 doorLight.color = Color.green;
             }
         }
-        else if(Inventory.charge > 0 && Inventory.charge < 4)
+        else if(Inventory.charge > 0 && Inventory.charge < 4 && col.gameObject.tag == "Player")
         {
             textHints.SendMessage("ShowHint", "This door won't budge.. guess it needs to be fully charged - maybe more power cells will help...");
             transform.FindChild("door").GetComponent<AudioSource>().PlayOneShot(lockedSound);
         }
-        else
+        else if (col.gameObject.tag == "Player")
         {
-            if (col.gameObject.tag == "Player")
-            {
-                textHints.SendMessage("ShowHint", "This door seems locked.. maybe that generator needs power...");
-                transform.FindChild("door").GetComponent<AudioSource>().PlayOneShot(lockedSound);
-                col.gameObject.SendMessage("HUDon");
-
-            }   
+            textHints.SendMessage("ShowHint", "This door seems locked.. maybe that generator needs power...");
+            transform.FindChild("door").GetComponent<AudioSource>().PlayOneShot(lockedSound);
+            col.gameObject.SendMessage("HUDon");   
         }
 
 

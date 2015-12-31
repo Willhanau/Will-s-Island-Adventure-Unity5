@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 
-
 namespace UnityStandardAssets.Effects
 {
     public class ExtinguishableParticleSystem : MonoBehaviour
