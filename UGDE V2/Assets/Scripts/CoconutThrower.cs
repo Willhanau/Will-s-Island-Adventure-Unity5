@@ -21,7 +21,8 @@ public class CoconutThrower : MonoBehaviour {
             GetComponent<AudioSource>().PlayOneShot(throwSound);
             Rigidbody newCoconut = Instantiate(coconutPrefab, transform.position, transform.rotation) as Rigidbody;
             newCoconut.name = "coconut";
-            newCoconut.velocity = transform.forward * throwSpeed;
+            //newCoconut.velocity = transform.forward * throwSpeed;
+            newCoconut.velocity = Camera.main.transform.forward * throwSpeed;
             //Physics.IgnoreCollision(transform.root.GetComponent<Collider>(), newCoconut.GetComponent<Collider>(), true); //will reset OnTriggerEnter() and OnTriggerExit() calls
 
         }
