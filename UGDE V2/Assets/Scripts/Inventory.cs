@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour {
     private bool fireLit = false;
     public GameObject matchGUIprefab;
     private GameObject matchGUI;
+    public GameObject winObj;
 
 	// Use this for initialization
 	void Start () {
@@ -84,6 +85,7 @@ public class Inventory : MonoBehaviour {
         Destroy(matchGUI);
         haveMatches = false;
         fireLit = true;
+        winObj.SendMessage("GameOver");
     }
 
 }
