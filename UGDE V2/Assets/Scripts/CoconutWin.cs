@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent (typeof (AudioSource))]
@@ -11,7 +11,8 @@ public class CoconutWin : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        targets = 0;
+        haveWon = false;
 	}
 	
 	// Update is called once per frame

@@ -1,10 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
 public class WinGame : MonoBehaviour {
 
-    public GameObject canvas;
     public GameObject winSequence;
     public GameObject fader;
     public AudioClip winClip;
