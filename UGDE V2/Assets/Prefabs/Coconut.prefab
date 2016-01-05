@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2301226}
   - 54: {fileID: 5471530}
   - 114: {fileID: 11421718}
+  - 96: {fileID: 9641870}
   m_Layer: 8
   m_Name: Coconut
   m_TagString: Untagged
@@ -80,6 +81,53 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!96 &9641870
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160056}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f239527227d1d3748a1ea5e6b67414d4, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: 0.25
+  m_StartWidth: 0.25
+  m_EndWidth: 0.1
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 3439329279
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 2583691263
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 1728053247
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 872415231
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 16777215
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
 --- !u!114 &11421718
 MonoBehaviour:
   m_ObjectHideFlags: 1
