@@ -16,7 +16,7 @@ public class AnimatorGUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 pos = new Vector3(Mathf.Lerp(xStartPosition, xEndPosition, (Time.time - startTime) * speed), transform.position.y, transform.position.z);
+		Vector3 pos = new Vector3(Mathf.Lerp(xStartPosition, xEndPosition, (Time.time - startTime) * speed), transform.position.y, transform.position.z);
         transform.position = pos;
 	}
 }
