@@ -234,7 +234,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+			//if right mouse button is held, then the user can use the mouse to look around.
+			//during the get mouse button the cursor is locked to the center and not visible.
+			//if the mouse button is released then the cursor is visible and unlocked from center.
+			if(Input.GetMouseButton(1)){
+				Screen.lockCursor = true;
+				Cursor.visible = false;
+            	m_MouseLook.LookRotation (transform, m_Camera.transform);
+			}
+			else if(Input.GetMouseButtonUp(1)){
+				Screen.lockCursor = false;
+				Cursor.visible = true;
+			}
         }
 
 

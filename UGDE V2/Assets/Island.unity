@@ -772,7 +772,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: -125}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389231760
@@ -919,7 +919,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.99904823
+      value: -0.99910146
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.z
@@ -927,7 +927,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.04361954
+      value: 0.04238149
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_RootOrder
@@ -984,6 +984,10 @@ Prefab:
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: far clip plane
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -175.142
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -1576,6 +1580,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!20 &806271742 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 400856382}
 --- !u!1001 &939300096
 Prefab:
   m_ObjectHideFlags: 0
@@ -4358,8 +4367,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1761907827}
-  m_LocalRotation: {x: 0, y: 0.06975623, z: 0, w: -0.9975641}
-  m_LocalPosition: {x: 1, y: 0, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -4450,9 +4459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f61bee1f16de754187a8cd736d2923a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 806271742}
   throwSound: {fileID: 8300000, guid: 7dfba132a836245348115b63f7f62cc8, type: 3}
   coconutPrefab: {fileID: 5471530, guid: b06b4906f346305429fbff97fc9d4eed, type: 2}
-  throwSpeed: 30
 --- !u!1001 &1794456987
 Prefab:
   m_ObjectHideFlags: 0
