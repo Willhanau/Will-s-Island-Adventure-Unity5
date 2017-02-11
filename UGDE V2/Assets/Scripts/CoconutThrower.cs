@@ -26,11 +26,13 @@ public class CoconutThrower : MonoBehaviour {
 			Ray ray = _camera.ScreenPointToRay (point);
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit)) {
-				GetComponent<AudioSource> ().PlayOneShot (throwSound);
-				Rigidbody newCoconut = Instantiate (coconutPrefab, transform.position, transform.rotation) as Rigidbody;
-				newCoconut.name = "coconut";
-				newCoconut.velocity = calcBallisticVelocityVector (hit);
-
+				if (hit.transform.gameObject.tag != "projectile") {
+					GetComponent<AudioSource> ().PlayOneShot (throwSound);
+					Rigidbody newCoconut = Instantiate (coconutPrefab, transform.position, transform.rotation) as Rigidbody;
+					newCoconut.name = "coconut";
+					Vector3 velocity = calcBallisticVelocityVector (hit);
+					newCoconut.velocity = velocity;
+				}
 			}
         }
 	}
@@ -44,6 +46,9 @@ public class CoconutThrower : MonoBehaviour {
 		direction.y = dist * Mathf.Tan (a);
 		dist += h/(Mathf.Tan(a));
 		float velocity = Mathf.Sqrt ((dist * Physics.gravity.magnitude) / Mathf.Sin (2 * a));
+		if (float.IsNaN(velocity)) {
+			velocity = 0.1f;
+		}
 		return velocity * direction.normalized;
 	}
 

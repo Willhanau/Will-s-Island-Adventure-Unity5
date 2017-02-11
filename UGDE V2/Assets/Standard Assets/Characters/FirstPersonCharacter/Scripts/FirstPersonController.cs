@@ -56,12 +56,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
-
-
+			
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+			if (Time.timeScale != 0) {
+				RotateView ();
+			}
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -242,7 +243,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				Cursor.visible = false;
             	m_MouseLook.LookRotation (transform, m_Camera.transform);
 			}
-			else if(Input.GetMouseButtonUp(1)){
+			else{
 				Screen.lockCursor = false;
 				Cursor.visible = true;
 			}
