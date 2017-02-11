@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OptionsMenuButtons : MonoBehaviour {
 	[SerializeField]
 	private GameObject optionsPanel;
 	[SerializeField]
 	private GameObject confirmPanel;
+	[SerializeField]
+	private Slider volumeSlider;
+
+	private void Start(){
+		volumeSlider.value = AudioListener.volume;
+	}
 
 	public void openMenu(){
 		Time.timeScale = 0;

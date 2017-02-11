@@ -534,6 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsPanel: {fileID: 954023659}
   confirmPanel: {fileID: 1870610545}
+  volumeSlider: {fileID: 1492877351}
 --- !u!1 &182351208
 GameObject:
   m_ObjectHideFlags: 0
